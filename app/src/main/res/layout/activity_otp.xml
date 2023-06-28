@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edtPhone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bbgd_6"
+    tools:context=".OTPverify">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/login_ill"
+        android:src="@drawable/ic_undraw_unlock_24mb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="244dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterOTP"
+        app:layout_constraintVertical_bias="0.682"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/otp"
+            android:theme="@style/TextInputLayoutStyle">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnGetOtp"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="350dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/generate_otp"
+                app:backgroundTint="#00bbff" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnVerify"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="350dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cntn"
+                app:backgroundTint="#00bbff" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textAlignment="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enterOTP"
+        android:layout_width="290dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="112dp"
+        android:gravity="center"
+        android:text="Enter the OTP sent to your registered phone"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="315dp"
+        android:layout_height="67dp"
+        android:text="Verification Code"
+        android:textAlignment="center"
+        android:textColor="#535151"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/enterOTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="175dp"
+        android:layout_height="23dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterOTP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

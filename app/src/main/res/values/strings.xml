@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">BKMI Events Manager</string>
+    <string name="next">Next</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="login">LOGIN</string>
+    <string name="teamimage">Team Image</string>
+    <string name="login_ill">Girl holding key next to phone, unlock</string>
+    <string name="welcome">Welcome,</string>
+    <string name="cntn">Continue</string>
+    <string name="forgotpass">Forgot Password?</string>
+    <string name="gmail">Gmail</string>
+    <string name="or">OR</string>
+    <string name="email">Email</string>
+    <string name="otp">6-Digit OTP</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="password">Password</string>
+    <string name="welcome_ill">Happy boy, welcomes</string>
+    <string name="fname">First Name</string>
+    <string name="email_val">Please provide a valid email address</string>
+    <string name="password_val">The password should have 8 or more characters</string>
+    <string name="fname_val">Please provide your first name</string>
+    <string name="signup_failed">Sign up Failed. Check your internet connection and try again.</string>
+    <string name="login_failed">Login Failed. Please try again.</string>
+    <string name="forgotpass_ill">Forgot Password, thinking&#8230;</string>
+    <string name="recovery_instr">Please provide your email address to recover your account.</string>
+    <string-array name="event_locations_list">
+        <item>Select Location...</item>
+        <item>Main Library</item>
+        <item>Stadium Pusat Sukan</item>
+        <item>Dewan Sultan Ibrahim</item>
+        <item>Pusat Kokurikulum</item>
+        <item>Arked UTHM</item>
+        <item>FSKTM</item>
+        <item>FKAAB</item>
+        <item>Pusat Kebudaayaan Universiti</item>
+        <item>Kor SISPA UTHM</item>
+    </string-array>
+
+    <string-array name="event_type_list">
+        <item>Select Event Type...</item>
+        <item>Meeting</item>
+        <item>Gathering</item>
+        <item>Competition</item>
+        <item>Training</item>
+        <item>Workshop</item>
+        <item>Exhibition</item>
+        <item>Trip</item>
+    </string-array>
+
+    <string name="main_library_lat">1.8574463</string>
+    <string name="main_library_lon">103.0797796</string>
+    <string name="pusat_sukan_lat">2.4894334</string>
+    <string name="pusat_sukan_lon">101.1241743</string>
+    <string name="dewan_ibrahim_lat">1.8572606</string>
+    <string name="dewan_ibrahim_lon">103.0798912</string>
+    <string name="pusat_koko_lat">1.8572606</string>
+    <string name="pusat_koko_lon">103.0798912</string>
+    <string name="arked_uthm_lat">1.8540115</string>
+    <string name="arked_uthm_lon">103.0800521</string>
+    <string name="fsktm_lat">1.8597698</string>
+    <string name="fsktm_lon">103.0825949</string>
+    <string name="fkaab_lat">1.8600808</string>
+    <string name="fkaab_lon">103.0829704</string>
+    <string name="pusat_budaya_lat">1.8539364</string>
+    <string name="pusat_budaya_lon">103.0817795</string>
+    <string name="kor_sispa_lat">1.8517703</string>
+    <string name="kor_sispa_lon">103.0793548</string>
+</resources>

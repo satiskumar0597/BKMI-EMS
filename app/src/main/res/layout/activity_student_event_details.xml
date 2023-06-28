@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bbgd_3"
+    tools:context=".StudentEventDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="134dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginStart="162dp"
+            android:text="Scan QR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_angle_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SurfaceView
+            android:id="@+id/qrcodeScanner"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="72dp"
+            android:layout_marginEnd="126dp"
+            android:layout_marginStart="120dp"
+            app:layout_constraintBottom_toTopOf="@+id/scanButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/eventname"
+            android:layout_width="300dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="68dp"
+            android:hint="Event Name"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cardView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/notifQR"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Press SCAN QR for Attendance"
+            android:textAlignment="center"
+            android:textColor="#0B0101"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/scanButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qrcodeScanner"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="350dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="19dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toTopOf="@+id/cardView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/icons8_dog_tag_50" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="115dp"
+                app:srcCompat="@drawable/icons8_done_50" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="65dp"
+                app:srcCompat="@drawable/icons8_list_50" />
+
+            <TextView
+                android:id="@+id/eventid"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:text="EventId"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/eventtype"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="75dp"
+                android:text="Event Type"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/checkincount"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="125dp"
+                android:text="Check-In Count"
+                android:textSize="18sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="19dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toTopOf="@+id/qrcodeScanner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                android:id="@+id/mapView2"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="463dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="19dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toTopOf="@+id/cardView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/icons8_calendar_50" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/icons8_alarm_clock_50" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="130dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/icons8_place_marker_50" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="180dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/icons8_short_curly_hair_girl_pencil_50"
+                tools:layout_editor_absoluteY="282dp" />
+
+            <TextView
+                android:id="@+id/eventdate"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="45dp"
+                android:text="Event Time"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/eventlocation"
+                app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/eventtime"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="95dp"
+                android:text="Created By"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                tools:layout_editor_absoluteY="296dp" />
+
+            <TextView
+                android:id="@+id/eventlocation"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="145dp"
+                android:text="Event Location"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/eventtime"
+                app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+            <TextView
+                android:id="@+id/createdby"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="31dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="195dp"
+                android:text="Event Creator"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/eventdate"
+                app:layout_constraintStart_toEndOf="@+id/imageView3" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtBarcodeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="QR Value"
+            app:layout_constraintTop_toBottomOf="@+id/notifQR"
+            tools:layout_editor_absoluteX="176dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
