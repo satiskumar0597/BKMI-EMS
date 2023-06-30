@@ -6,9 +6,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,12 +22,17 @@ import java.util.List;
 import java.util.Map;
 
 public class StudentDiscoverFragment extends Fragment {
+
+    private EditText searchBar;
+
     public StudentDiscoverFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_student_discover, container, false);
+        searchBar= view.findViewById(R.id.searchBar);
+
         Database db = new Database(new AsyncResponse() {
             @Override
             public void resultHandler(Map<String, Object> result, int resultCode) {
@@ -62,7 +70,28 @@ public class StudentDiscoverFragment extends Fragment {
             }
         });
 
+//        searchBar.addTextChangedListener(new TextWatcher() {
+//
+//            @Override
+//            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+//                currrentEventList.getFilter().filter(cs);
+//            }
+//
+//            @Override
+//            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+//                Toast.makeText(getContext(),"before text change",Toast.LENGTH_LONG).show();
+//            }
+//
+//            @Override
+//            public void afterTextChanged(               Editable arg0) {
+//                Toast.makeText(getContext(),"after text change",Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+
         db.readCollection("events", Event.class, 0);
+
+
         return view;
     }
 
