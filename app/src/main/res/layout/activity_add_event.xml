@@ -14,21 +14,21 @@
 
     <ImageView
         android:id="@+id/topBanner"
-        android:layout_width="514dp"
-        android:layout_height="161dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="450dp"
+        android:layout_height="225dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/blue_banner" />
+        app:srcCompat="@drawable/meeting_vector" />
 
     <ImageView
         android:id="@+id/addEventIcon"
         android:layout_width="68dp"
         android:layout_height="76dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="224dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/add_event_icon" />
@@ -37,12 +37,13 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="85dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat"
         android:text="Add New Event"
-        android:textSize="24sp"
+        android:textColor="#070606"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -73,7 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:textSize="18sp"
+                android:textColor="#090808"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,6 +113,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="#51BEEF"
             android:text="Pick Start Date and TIme"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -132,6 +135,7 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="#51BEEF"
             android:text="Pick End Date and TIme"/>
 
         <Spinner

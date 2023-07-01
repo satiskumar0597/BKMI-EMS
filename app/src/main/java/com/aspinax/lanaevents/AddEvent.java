@@ -77,7 +77,7 @@ public class AddEvent extends AppCompatActivity implements AdapterView.OnItemSel
         final Button dateButton2 = findViewById(R.id.btnPick2);
         final TextInputEditText eventName = findViewById(R.id.eventName);
         final TextView eventId = findViewById(R.id.eventID);
-        eventId.setText(genEventID());
+        eventId.setText("Event ID: "+genEventID());
         startDate = findViewById(R.id.startDate);
         endDate = findViewById(R.id.endDate);
 

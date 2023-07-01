@@ -236,7 +236,8 @@ public class AdminEventDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 qrCode.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.icons8_qr_code_100));
-                countDownTimer.setText("Click \"Generate\" to get Dynamic QR");
+                countDownTimer.setText("");
+                notificationforQR.setText("Click \"Generate QR\" to get QR Code");
                 timerInstance.cancel();
             }
         });

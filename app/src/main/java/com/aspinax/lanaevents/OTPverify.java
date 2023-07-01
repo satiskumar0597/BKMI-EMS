@@ -128,7 +128,7 @@ public class OTPverify extends AppCompatActivity {
                 } else {
                     // if the text field is not empty we are calling our
                     // send OTP method for getting OTP from Firebase.
-                    String phone = "+6" + edtPhone.getText().toString();
+                    String phone = "+60" + edtPhone.getText().toString();
                     sendVerificationCode(phone);
                 }
             }
