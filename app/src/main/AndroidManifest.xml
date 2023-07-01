@@ -18,9 +18,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewEventActivity" />
-        <activity android:name=".CaptureActivityPortrait" />
+        <activity android:name=".ViewEventActivity"
+            android:exported="true"/>
+        <activity android:name=".CaptureActivityPortrait"
+            android:exported="true"/>
         <activity android:name=".MainActivity"
+            android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,18 +31,30 @@
             </intent-filter>
         </activity>
         <activity android:name=".StudentMainActivity"
+            android:exported="true"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".AdminMainActivity" />
-        <activity android:name=".NoAuthActivity" />
-        <activity android:name=".OTPverify" />
-        <activity android:name=".AddEvent" />
-        <activity android:name=".AdminEventDetails" />
-        <activity android:name=".AdminEventReportDetails" />
-        <activity android:name=".StudentDiscoverEventDetails" />
-        <activity android:name=".StudentEventDetails" />
+        <activity android:name=".ForgotPasswordActivity"
+            android:exported="true"/>
+        <activity android:name=".SignUpActivity"
+            android:exported="true"/>
+        <activity android:name=".LoginActivity"
+            android:exported="true"/>
+        <activity android:name=".AdminMainActivity"
+            android:exported="true"/>
+        <activity android:name=".NoAuthActivity"
+            android:exported="true"/>
+        <activity android:name=".OTPverify"
+            android:exported="true"/>
+        <activity android:name=".AddEvent"
+            android:exported="true"/>
+        <activity android:name=".AdminEventDetails"
+            android:exported="true"/>
+        <activity android:name=".AdminEventReportDetails"
+            android:exported="true"/>
+        <activity android:name=".StudentDiscoverEventDetails"
+            android:exported="true"/>
+        <activity android:name=".StudentEventDetails"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

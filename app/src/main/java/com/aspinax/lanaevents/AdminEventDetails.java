@@ -1,4 +1,5 @@
 package com.aspinax.lanaevents;
+import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -50,6 +51,7 @@ public class AdminEventDetails extends AppCompatActivity {
     private MapView mapView;
     private ImageView qrCode;
     private TextView countDownTimer;
+    private CountDownTimer timerInstance;
     TextView notificationforQR;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +112,7 @@ public class AdminEventDetails extends AppCompatActivity {
         Button dltButton = findViewById(R.id.deleteButton);
         // Generate button for generate qr code
         Button generateButton = findViewById(R.id.generateButton);
+        Button stopButton = findViewById(R.id.stopButton);
 
         // Back button to go to home page
         ImageView backBtn = findViewById(R.id.back);
@@ -229,6 +232,15 @@ public class AdminEventDetails extends AppCompatActivity {
             }
         });
 
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qrCode.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.icons8_qr_code_100));
+                countDownTimer.setText("Click \"Generate\" to get Dynamic QR");
+                timerInstance.cancel();
+            }
+        });
+
 
 
     }
@@ -295,13 +307,13 @@ public class AdminEventDetails extends AppCompatActivity {
 
     public void countDownTimer(String eventId, Date startdate , Date enddate){
         genQRcode(eventId, startdate, enddate);
-        new CountDownTimer(10000, 1000){
+        timerInstance= new CountDownTimer(10000, 1000){
             int counter=10;
             public void onTick(long millisUntilFinished){
                 countDownTimer.setText("Please scan within "+String.valueOf(counter)+" sec");
                 counter--;
             }
-            public  void onFinish(){
+            public void onFinish(){
                 //countDownTimer.setText("QR Code Expired. Please Generate again");
                 countDownTimer(eventId, startdate, enddate);
             }

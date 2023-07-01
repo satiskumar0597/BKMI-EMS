@@ -4,8 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/bbgd_8"
+    android:fillViewport="true"
     tools:context=".AdminEventDetails">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,9 +16,9 @@
 
         <Button
             android:id="@+id/deleteButton"
-            android:layout_width="134dp"
-            android:layout_height="54dp"
-            android:layout_marginBottom="40dp"
+            android:layout_width="138dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="82dp"
             android:layout_marginEnd="82dp"
             android:layout_marginStart="255dp"
             android:background="#51BEEF"
@@ -30,13 +31,28 @@
 
         <Button
             android:id="@+id/generateButton"
-            android:layout_width="134dp"
-            android:layout_height="54dp"
-            android:layout_marginBottom="40dp"
+            android:layout_width="138dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="82dp"
             android:layout_marginEnd="192dp"
             android:layout_marginStart="20dp"
             android:background="#51BEEF"
             android:text="Generate QR"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="138dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="192dp"
+            android:layout_marginStart="20dp"
+            android:background="#51BEEF"
+            android:text="Stop Dynamic QR"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +78,7 @@
             android:layout_marginTop="16dp"
             android:contentDescription="TODO"
             android:src="@drawable/ic_angle_left"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -85,7 +102,7 @@
             android:id="@+id/notifQR"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="4dp"
             android:layout_marginEnd="87dp"
             android:layout_marginStart="104dp"
             android:layout_marginTop="1dp"
@@ -106,9 +123,10 @@
         <TextView
             android:id="@+id/countDownTimer"
             android:layout_width="350dp"
-            android:layout_height="45dp"
+            android:layout_height="40dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:textAlignment="center"
 
@@ -117,6 +135,7 @@
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@id/deleteButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notifQR"
             app:layout_constraintVertical_bias="0.135" />

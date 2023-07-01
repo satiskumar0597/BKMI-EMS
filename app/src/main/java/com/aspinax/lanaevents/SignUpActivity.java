@@ -120,4 +120,12 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
+    public boolean isValidEmail(String email){
+        String[] arrOfStr = email.split("@", 1);
+        if (arrOfStr[1].compareTo("siswa.uthm.edu.my")==0)
+            return true;
+        else
+            return false;
+    }
 }
