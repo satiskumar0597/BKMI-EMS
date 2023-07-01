@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/montserrat"
-        android:text="Hello, Saty"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="33sp"

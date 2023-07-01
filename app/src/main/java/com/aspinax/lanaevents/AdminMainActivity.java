@@ -173,6 +173,7 @@ public class AdminMainActivity extends AppCompatActivity {
         viewReportFloat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                greeting.setText("");
                 bckgroundDimmer.setVisibility(View.INVISIBLE);
                 addEventFloat.hide();
                 viewReportFloat.hide();

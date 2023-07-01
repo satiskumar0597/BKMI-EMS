@@ -15,7 +15,7 @@
         android:fontFamily="@font/montserrat"
         android:text="Attendance Report"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="33sp"
         android:textStyle="bold" />
 
     <TextView
